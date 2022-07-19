@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+h2 {
+    padding-top: 16px;
+}
+
+h6 {
+    font-size: 3px;
+    padding-top: 3px;
+}
+textarea {
+    height: 90vh;
+    width: 780%;
+}
+
+.main {
+    line-height: 2.0;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.search {
+    width: 90%;
+    font-size: 16px;
+    line-height: 16px;
+    border-color:grey;
+}
+
+.sidebar {
+    line-height: 1.8;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 30px;
+}
+
+.sidebar h2 {
+    margin-top: 0px;
+}
+
+.btn {
+    background-color: #008CBA; /* blue */
+    border: none;
+    color: white;
+    /*width: 100px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn1 {
+    width: 100px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.btn1:hover {
+    width: 100px;
+    background-color: #008CBA;
+    color: white;
+}
+
+div[type=text1] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}

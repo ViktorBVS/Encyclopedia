@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'encyclopedia/styles.css' %}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="sidebar col-lg-2 col-md-3">
+                <h2>Encyclopedia</h2>
+                <h2></h2>
+                <form action="{% url 'encyclopedia:searchpage'%}" method="get">
+                    <input class="search" type="text" name="q" placeholder="Поиск по сайту">
+                </form>
+                <h6></h6>
+                <div>
+                    <a href="{% url 'encyclopedia:index' %}">Главная</a>
+                </div>
+                <div>
+                    <a href="{% url 'encyclopedia:newpage' %}">Новая страница</a>
+                </div>
+                <div>
+                    <a href="{% url 'encyclopedia:randompage' %}">Случайная страница</a>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>

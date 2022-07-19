@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+{{ page_content | safe }} 
+<h2></h2>
+<form action="{% url 'encyclopedia:editpage' %}" method="post">
+    {% csrf_token %}
+    <input class="btn btn1" type="submit" value="Изменить"> 
+    <input type="hidden" name="page_name" value="{{page_name}}">
+    <input type="hidden" name="page_content" value={{page_content}}>
+</form>
+<h6></h6>
+<form action="{% url 'encyclopedia:deletepage' %}" method="post">
+    {% csrf_token %} 
+    <input type="hidden" name="page_name" value="{{page_name}}">
+    <input class="btn btn1" type="submit" value="Удалить">
+</form>
+
+{% endblock %}
